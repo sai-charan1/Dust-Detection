@@ -2,13 +2,14 @@ import streamlit as st
 from PIL import Image
 from app_module import classify
 
-st.set_page_config(page_title='Rice Sure', page_icon='fav.jpeg', layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title='Solar Photovoltaics Checker', page_icon='model/solar_logo.jpeg', layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 
-st.image('ricesurelogo.jpeg', width=200)
-tab1, tab2, tab3 = st.tabs(["Prediction and Quality Check", "Rice Information", "Group Members"])
+st.image('ricesurelogo.jpeg', width=200)  
+tab1, tab2, tab3 = st.tabs(["Prediction and Quality Check", "Solar Panel Information", "Student Information"])
 
 with tab1:
+        with st.form:
         #st.title("Rice Sure")
         #st.divider()
         st.subheader("RiceSure app fights fraudulent in the rice industry by using Convolutional Neural Network with Transfer Learning and Fine Tuning to identify rice grain types and ensure consistent quality control.")
